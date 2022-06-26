@@ -1,8 +1,8 @@
 class Api::AccountsController < ApplicationController
+
   before_action :set_account, only: [:show, :update, :destroy]
 
   def index
-    binding.pry
     render json: current_user.accounts 
   end
 
